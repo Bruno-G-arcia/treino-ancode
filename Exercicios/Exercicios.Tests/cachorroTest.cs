@@ -11,7 +11,7 @@ namespace Exercicios.Tests
         public void Cachorro_Latir_Test()
         {
             Cachorro leia = new Cachorro();
-            string latido = leia.Latir();
+            string latido = Cachorro.Latir();
             Console.WriteLine(latido);
             Assert.AreEqual("Bork", latido);
         }
@@ -19,7 +19,7 @@ namespace Exercicios.Tests
         public void Cachorro_QuantoDevoComer_Test()
         {
             Cachorro leia = new Cachorro();
-            string quantoDevoComer = leia.QuantoDevoComer(1);
+            string quantoDevoComer = Cachorro.QuantoDevoComer(1);
             Console.WriteLine(quantoDevoComer);
             Assert.AreEqual("Como tenho 1kg, devo comer 50g por dia", quantoDevoComer);
         }
@@ -27,9 +27,9 @@ namespace Exercicios.Tests
         public void Cachorro_Set_Get_Nome_Teste()
         {
             Cachorro yuri = new Cachorro();
-            yuri.SetNome("Yuri");
-            Assert.AreEqual("Yuri", yuri.GetNome());
-            Console.WriteLine(yuri.GetNome());
+            yuri.Nome = "Yuri";
+            Assert.AreEqual("Yuri", yuri.Nome);
+            Console.WriteLine(yuri.Nome);
         }
     }
 }
