@@ -31,5 +31,32 @@ namespace Exercicios.Tests
             Assert.AreEqual("Yuri", yuri.Nome);
             Console.WriteLine(yuri.Nome);
         }
+        [TestMethod]
+        public void Cachorro_Associacao_Dono_Test()
+        {
+            var bruno = new Dono
+            {
+                Nome = "Bruno",
+                Telefone = "999999999",
+                Email = "garciaBruno@alleanzasistemas.com.br"
+            };
+
+            var luma = new Cachorro
+            {
+                Nome = "Luma",
+                Dono = bruno
+            };
+            Console.WriteLine(luma.Dono.Nome);
+        }
+        [TestMethod]
+        public void Cachorro_Enum_Sexo_test()
+        {
+            var tequila = new Cachorro
+            {
+                Nome = "Tequila",
+                Sexo = Sexo.Fêmea
+            };
+            Console.WriteLine(tequila.Sexo);
+        }      
     }
 }
