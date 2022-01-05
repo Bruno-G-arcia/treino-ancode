@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercicios.Domain
+﻿namespace Exercicios.Domain
 {
     public static class HelloWorld
     {
         public static string SayHello()
         {
-            return "Hello World";
+            return "Hello World!";
+        }
+
+        public static void PassaValor(int valor)
+        {
+            valor = 999;
+        }
+
+        public static void PassaReferencia(Cachorro cachorro)
+        {
+            cachorro.Nome = "Tequila";
         }
     }
 }

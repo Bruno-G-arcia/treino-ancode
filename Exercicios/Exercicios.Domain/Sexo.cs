@@ -2,6 +2,6 @@
 {
     public enum Sexo
     {
-        Macho, Fêmea
+        Femea, Macho
     }
 }
